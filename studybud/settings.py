@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -133,14 +134,9 @@ USE_TZ = True
 # ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 print(STATIC_ROOT)
-# STATIC_URL = 'static/'
-
-# STATIC_ROOT = '/'
-
 STATIC_URL = 'static/'
-
 STATICFILES_DIRS = []
-
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 django_heroku.settings(locals(), staticfiles=False)
 
 # Default primary key field type
