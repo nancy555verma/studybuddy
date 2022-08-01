@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
     <title>StudyBuddy - Find study partners around the world!</title>
   </head>
 
@@ -14,10 +15,12 @@
 
     {%include 'navbar.html' %}
     {% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-            <li>{{message}}</li>
-        {% endfor %}
+    <ul class="text-danger">
+      {% for field,error in form.errors.items %}
+      <div >
+        {{error|striptags}}
+      </div>
+      {% endfor %}
     </ul>
   {% endif %}
     {% block  content %}
