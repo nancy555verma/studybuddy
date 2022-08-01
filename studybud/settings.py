@@ -88,10 +88,10 @@ WSGI_APPLICATION = 'studybud.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd7vbkat38t2t4u',
-        'USER': 'xefxzkgqsttjge',
-        'PASSWORD': '484718a671b1500d0fc3ae5facf5e9bff7ba25d2fb22aab981c8800c689370e1',
-        'HOST': 'ec2-107-22-122-106.compute-1.amazonaws.com',
+        'NAME': 'd1dll37nokdcol',
+        'USER': 'cvunrqztbmtzoh',
+        'PASSWORD': 'c856b2fc4761140237e8b9d708c3bd7da2ab65bf4bc1169f5463f94847e8b279',
+        'HOST': 'ec2-44-206-197-71.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 
